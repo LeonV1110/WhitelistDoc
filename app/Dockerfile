@@ -2,5 +2,5 @@ FROM tiangolo/uwsgi-nginx-flask:python3.8-alpine
 RUN apk --update add bash nano
 ENV STATIC_URL /static
 ENV STATIC_PATH /WhitelistBot/WhitelistDoc/app/static
-COPY ./requirements.txt .
+#COPY ./requirements.txt .
 RUN pip install -r requirements.txt
