@@ -72,15 +72,15 @@ def get_permission_lines():
         lines.append(line)
     return lines
 
-def get_setup_lines():
+def get_setup_lines(): #TODO, make it read from a config file
     
-    whitelist = "group=whitelist:reserve \n"
-    mvp = "group=MVP:reserve \n"
-    cam = "group=camonly:cameraman \n"
+    whitelist = "Group=whitelist:reserve \n"
+    mvp = "Group=mvp:reserve \n"
+    cam = "Group=camonly:cameraman \n"
     creator = "group=creator:balance,reserve,teamchange \n"
-    admin="group=admin:changemap,balance,chat,cameraman,kick,reserve,teamchange,canseeadminchat \n"
-    seniorAdmin="group=senior:changemap,cheat,balance,chat,kick,ban,cameraman,reserve,teamchange,forceteamchange,canseeadminchat,clientdemos \n"
-    dadmin="group=dadmin:changemap,cheat,balance,chat,kick,ban,cameraman,immune,reserve,teamchange,forceteamchange,canseeadminchat,demos,clientdemos \n"
-    junior="group=junior:changemap,balance,chat,reserve,teamchange,canseeadminchat \n"
-    
-    return [whitelist, mvp, cam, creator, admin, seniorAdmin, dadmin, junior]
+
+    topDoD = 'Group=TopDoD:startvote,changemap,pause,cheat,private,balance,chat,kick,ban,config,cameraman,immune,manageserver,featuretest,reserve,demos,clientdemos,debug,teamchange,forceteamchange,canseeadminchat \n'
+    senior = 'Group=Senior:changemap,balance,chat,kick,ban,config,cameraman,reserve,debug,teamchange,forceteamchange,canseeadminchat \n'
+    admin = 'Group=Admin:changemap,balance,chat,kick,ban,cameraman,reserve,debug,teamchange,forceteamchange,canseeadminchat \n'
+    junior="group=Junior:changemap,balance,chat,reserve,teamchange,canseeadminchat \n"
+    return [topDoD, senior, admin, junior, whitelist, mvp, cam, creator]
