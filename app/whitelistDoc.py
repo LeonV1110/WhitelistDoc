@@ -76,7 +76,7 @@ def get_setup_lines(): #TODO, make it read from a config file
     
     whitelist = "Group=whitelist:reserve \n"
     mvp = "Group=mvp:reserve \n"
-    cam = "Group=camonly:cameraman \n"
+    cam = "Group=cam:cameraman, reserve, teamchange, balance \n"
     creator = "group=creator:balance,reserve,teamchange \n"
 
     topDoD = 'Group=TopDoD:startvote,changemap,pause,cheat,private,balance,chat,kick,ban,config,cameraman,immune,manageserver,featuretest,reserve,demos,clientdemos,debug,teamchange,forceteamchange,canseeadminchat \n'
